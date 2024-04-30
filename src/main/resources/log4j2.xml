@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <!--            <JsonLayout complete="false" compact="true" eventEol="true" includeTimeMillis="true" properties="true" objectMessageAsJsonObject="true" />-->
+            <!--            <JsonLayout complete="false" compact="true" eventEol="true" includeTimeMillis="true" properties="true" objectMessageAsJsonObject="false" />-->
+            <JsonTemplateLayout eventTemplateUri="classpath:log4j-json-config.json"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>
